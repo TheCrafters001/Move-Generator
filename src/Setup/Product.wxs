@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"><?define Move Generator_TargetDir=$(var.Move Generator.TargetDir)?>
+	<Product Id="*" Name="Move Generator" Language="1033" Version="1.0.0.0" Manufacturer="TheCrafters001" UpgradeCode="3e3a7235-55c8-480f-9876-c0b3cc279c87">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="Setup" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLFOLDER" Name="Move Generator" />
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+			<Component Id="Move_Generator.runtimeconfig.json" Guid="007fd5c8-c914-40b8-a797-ab37504ab5cb">
+			  <File Id="Move_Generator.runtimeconfig.json" Name="Move Generator.runtimeconfig.json" Source="$(var.Move Generator_TargetDir)Move Generator.runtimeconfig.json" />
+			</Component>
+			<Component Id="Move_Generator.dll" Guid="29d4aa8a-b18c-4617-bdd1-9c3e5f10521f">
+			  <File Id="Move_Generator.dll" Name="Move Generator.dll" Source="$(var.Move Generator_TargetDir)Move Generator.dll" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

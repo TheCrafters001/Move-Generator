@@ -24,6 +24,13 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.pg_MoveInfo = New System.Windows.Forms.TabPage()
+        Me.description_txtBox = New System.Windows.Forms.RichTextBox()
+        Me.description_lbl = New System.Windows.Forms.Label()
+        Me.effectChance_txtBox = New System.Windows.Forms.TextBox()
+        Me.effectChance_lbl = New System.Windows.Forms.Label()
+        Me.flags_grpBox = New System.Windows.Forms.GroupBox()
+        Me.addFlag_btn = New System.Windows.Forms.Button()
+        Me.flag_lstBox = New System.Windows.Forms.ListBox()
         Me.functionCode_txtBox = New System.Windows.Forms.TextBox()
         Me.functionCode_lbl = New System.Windows.Forms.Label()
         Me.priority_txtBox = New System.Windows.Forms.TextBox()
@@ -45,16 +52,12 @@ Partial Class Form1
         Me.internalName_txtBox = New System.Windows.Forms.TextBox()
         Me.internalName_lbl = New System.Windows.Forms.Label()
         Me.pg_Output = New System.Windows.Forms.TabPage()
-        Me.flags_grpBox = New System.Windows.Forms.GroupBox()
-        Me.flag_lstBox = New System.Windows.Forms.ListBox()
-        Me.addFlag_btn = New System.Windows.Forms.Button()
-        Me.effectChance_txtBox = New System.Windows.Forms.TextBox()
-        Me.effectChance_lbl = New System.Windows.Forms.Label()
-        Me.description_lbl = New System.Windows.Forms.Label()
-        Me.description_txtBox = New System.Windows.Forms.RichTextBox()
+        Me.generate_btn = New System.Windows.Forms.Button()
+        Me.output_txtBox = New System.Windows.Forms.RichTextBox()
         Me.TabControl1.SuspendLayout()
         Me.pg_MoveInfo.SuspendLayout()
         Me.flags_grpBox.SuspendLayout()
+        Me.pg_Output.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -102,6 +105,69 @@ Partial Class Form1
         Me.pg_MoveInfo.TabIndex = 0
         Me.pg_MoveInfo.Text = "Move Information"
         Me.pg_MoveInfo.UseVisualStyleBackColor = True
+        '
+        'description_txtBox
+        '
+        Me.description_txtBox.Location = New System.Drawing.Point(209, 274)
+        Me.description_txtBox.Name = "description_txtBox"
+        Me.description_txtBox.Size = New System.Drawing.Size(255, 128)
+        Me.description_txtBox.TabIndex = 24
+        Me.description_txtBox.Text = ""
+        '
+        'description_lbl
+        '
+        Me.description_lbl.AutoSize = True
+        Me.description_lbl.Location = New System.Drawing.Point(209, 256)
+        Me.description_lbl.Name = "description_lbl"
+        Me.description_lbl.Size = New System.Drawing.Size(67, 15)
+        Me.description_lbl.TabIndex = 23
+        Me.description_lbl.Text = "Description"
+        '
+        'effectChance_txtBox
+        '
+        Me.effectChance_txtBox.Location = New System.Drawing.Point(209, 230)
+        Me.effectChance_txtBox.Name = "effectChance_txtBox"
+        Me.effectChance_txtBox.PlaceholderText = "10"
+        Me.effectChance_txtBox.Size = New System.Drawing.Size(195, 23)
+        Me.effectChance_txtBox.TabIndex = 22
+        '
+        'effectChance_lbl
+        '
+        Me.effectChance_lbl.AutoSize = True
+        Me.effectChance_lbl.Location = New System.Drawing.Point(209, 212)
+        Me.effectChance_lbl.Name = "effectChance_lbl"
+        Me.effectChance_lbl.Size = New System.Drawing.Size(80, 15)
+        Me.effectChance_lbl.TabIndex = 21
+        Me.effectChance_lbl.Text = "Effect Chance"
+        '
+        'flags_grpBox
+        '
+        Me.flags_grpBox.Controls.Add(Me.addFlag_btn)
+        Me.flags_grpBox.Controls.Add(Me.flag_lstBox)
+        Me.flags_grpBox.Location = New System.Drawing.Point(209, 56)
+        Me.flags_grpBox.Name = "flags_grpBox"
+        Me.flags_grpBox.Size = New System.Drawing.Size(255, 153)
+        Me.flags_grpBox.TabIndex = 20
+        Me.flags_grpBox.TabStop = False
+        Me.flags_grpBox.Text = "Flags (Double Click a flag to remove it)"
+        '
+        'addFlag_btn
+        '
+        Me.addFlag_btn.Location = New System.Drawing.Point(6, 122)
+        Me.addFlag_btn.Name = "addFlag_btn"
+        Me.addFlag_btn.Size = New System.Drawing.Size(243, 23)
+        Me.addFlag_btn.TabIndex = 21
+        Me.addFlag_btn.Text = "Add Flag"
+        Me.addFlag_btn.UseVisualStyleBackColor = True
+        '
+        'flag_lstBox
+        '
+        Me.flag_lstBox.FormattingEnabled = True
+        Me.flag_lstBox.ItemHeight = 15
+        Me.flag_lstBox.Location = New System.Drawing.Point(6, 22)
+        Me.flag_lstBox.Name = "flag_lstBox"
+        Me.flag_lstBox.Size = New System.Drawing.Size(243, 94)
+        Me.flag_lstBox.TabIndex = 0
         '
         'functionCode_txtBox
         '
@@ -282,6 +348,8 @@ Partial Class Form1
         '
         'pg_Output
         '
+        Me.pg_Output.Controls.Add(Me.output_txtBox)
+        Me.pg_Output.Controls.Add(Me.generate_btn)
         Me.pg_Output.Location = New System.Drawing.Point(4, 24)
         Me.pg_Output.Name = "pg_Output"
         Me.pg_Output.Padding = New System.Windows.Forms.Padding(3)
@@ -290,68 +358,23 @@ Partial Class Form1
         Me.pg_Output.Text = "Output"
         Me.pg_Output.UseVisualStyleBackColor = True
         '
-        'flags_grpBox
+        'generate_btn
         '
-        Me.flags_grpBox.Controls.Add(Me.addFlag_btn)
-        Me.flags_grpBox.Controls.Add(Me.flag_lstBox)
-        Me.flags_grpBox.Location = New System.Drawing.Point(209, 56)
-        Me.flags_grpBox.Name = "flags_grpBox"
-        Me.flags_grpBox.Size = New System.Drawing.Size(255, 153)
-        Me.flags_grpBox.TabIndex = 20
-        Me.flags_grpBox.TabStop = False
-        Me.flags_grpBox.Text = "Flags (Double Click a flag to remove it)"
+        Me.generate_btn.Location = New System.Drawing.Point(522, 396)
+        Me.generate_btn.Name = "generate_btn"
+        Me.generate_btn.Size = New System.Drawing.Size(75, 23)
+        Me.generate_btn.TabIndex = 0
+        Me.generate_btn.Text = "Generate"
+        Me.generate_btn.UseVisualStyleBackColor = True
         '
-        'flag_lstBox
+        'output_txtBox
         '
-        Me.flag_lstBox.FormattingEnabled = True
-        Me.flag_lstBox.ItemHeight = 15
-        Me.flag_lstBox.Location = New System.Drawing.Point(6, 22)
-        Me.flag_lstBox.Name = "flag_lstBox"
-        Me.flag_lstBox.Size = New System.Drawing.Size(243, 94)
-        Me.flag_lstBox.TabIndex = 0
-        '
-        'addFlag_btn
-        '
-        Me.addFlag_btn.Location = New System.Drawing.Point(6, 122)
-        Me.addFlag_btn.Name = "addFlag_btn"
-        Me.addFlag_btn.Size = New System.Drawing.Size(243, 23)
-        Me.addFlag_btn.TabIndex = 21
-        Me.addFlag_btn.Text = "Add Flag"
-        Me.addFlag_btn.UseVisualStyleBackColor = True
-        '
-        'effectChance_txtBox
-        '
-        Me.effectChance_txtBox.Location = New System.Drawing.Point(209, 230)
-        Me.effectChance_txtBox.Name = "effectChance_txtBox"
-        Me.effectChance_txtBox.PlaceholderText = "10"
-        Me.effectChance_txtBox.Size = New System.Drawing.Size(195, 23)
-        Me.effectChance_txtBox.TabIndex = 22
-        '
-        'effectChance_lbl
-        '
-        Me.effectChance_lbl.AutoSize = True
-        Me.effectChance_lbl.Location = New System.Drawing.Point(209, 212)
-        Me.effectChance_lbl.Name = "effectChance_lbl"
-        Me.effectChance_lbl.Size = New System.Drawing.Size(80, 15)
-        Me.effectChance_lbl.TabIndex = 21
-        Me.effectChance_lbl.Text = "Effect Chance"
-        '
-        'description_lbl
-        '
-        Me.description_lbl.AutoSize = True
-        Me.description_lbl.Location = New System.Drawing.Point(209, 256)
-        Me.description_lbl.Name = "description_lbl"
-        Me.description_lbl.Size = New System.Drawing.Size(67, 15)
-        Me.description_lbl.TabIndex = 23
-        Me.description_lbl.Text = "Description"
-        '
-        'description_txtBox
-        '
-        Me.description_txtBox.Location = New System.Drawing.Point(209, 274)
-        Me.description_txtBox.Name = "description_txtBox"
-        Me.description_txtBox.Size = New System.Drawing.Size(255, 128)
-        Me.description_txtBox.TabIndex = 24
-        Me.description_txtBox.Text = ""
+        Me.output_txtBox.Location = New System.Drawing.Point(6, 6)
+        Me.output_txtBox.Name = "output_txtBox"
+        Me.output_txtBox.ReadOnly = True
+        Me.output_txtBox.Size = New System.Drawing.Size(591, 384)
+        Me.output_txtBox.TabIndex = 1
+        Me.output_txtBox.Text = ""
         '
         'Form1
         '
@@ -368,6 +391,7 @@ Partial Class Form1
         Me.pg_MoveInfo.ResumeLayout(False)
         Me.pg_MoveInfo.PerformLayout()
         Me.flags_grpBox.ResumeLayout(False)
+        Me.pg_Output.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -402,4 +426,6 @@ Partial Class Form1
     Friend WithEvents flags_grpBox As GroupBox
     Friend WithEvents addFlag_btn As Button
     Friend WithEvents flag_lstBox As ListBox
+    Friend WithEvents output_txtBox As RichTextBox
+    Friend WithEvents generate_btn As Button
 End Class
