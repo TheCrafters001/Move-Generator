@@ -52,8 +52,8 @@ Partial Class Form1
         Me.internalName_txtBox = New System.Windows.Forms.TextBox()
         Me.internalName_lbl = New System.Windows.Forms.Label()
         Me.pg_Output = New System.Windows.Forms.TabPage()
-        Me.generate_btn = New System.Windows.Forms.Button()
         Me.output_txtBox = New System.Windows.Forms.RichTextBox()
+        Me.generate_btn = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.pg_MoveInfo.SuspendLayout()
         Me.flags_grpBox.SuspendLayout()
@@ -358,15 +358,6 @@ Partial Class Form1
         Me.pg_Output.Text = "Output"
         Me.pg_Output.UseVisualStyleBackColor = True
         '
-        'generate_btn
-        '
-        Me.generate_btn.Location = New System.Drawing.Point(522, 396)
-        Me.generate_btn.Name = "generate_btn"
-        Me.generate_btn.Size = New System.Drawing.Size(75, 23)
-        Me.generate_btn.TabIndex = 0
-        Me.generate_btn.Text = "Generate"
-        Me.generate_btn.UseVisualStyleBackColor = True
-        '
         'output_txtBox
         '
         Me.output_txtBox.Location = New System.Drawing.Point(6, 6)
@@ -375,6 +366,15 @@ Partial Class Form1
         Me.output_txtBox.Size = New System.Drawing.Size(591, 384)
         Me.output_txtBox.TabIndex = 1
         Me.output_txtBox.Text = ""
+        '
+        'generate_btn
+        '
+        Me.generate_btn.Location = New System.Drawing.Point(522, 396)
+        Me.generate_btn.Name = "generate_btn"
+        Me.generate_btn.Size = New System.Drawing.Size(75, 23)
+        Me.generate_btn.TabIndex = 0
+        Me.generate_btn.Text = "Generate"
+        Me.generate_btn.UseVisualStyleBackColor = True
         '
         'Form1
         '

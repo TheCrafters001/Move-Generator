@@ -36,4 +36,13 @@ Public Class Form1
             UpdateManager.RestartApp()
         End If
     End Function
+
+    Private Sub addFlag_btn_Click(sender As Object, e As EventArgs) Handles addFlag_btn.Click
+        Dim flag As String = InputBox("Please enter a Flag", "Flags")
+        flag_lstBox.Items.Add(flag)
+    End Sub
+
+    Private Sub flag_lstBox_DoubleClick(sender As Object, e As EventArgs) Handles flag_lstBox.DoubleClick
+        flag_lstBox.SelectedItems.Remove(flag_lstBox.SelectedItems)
+    End Sub
 End Class
