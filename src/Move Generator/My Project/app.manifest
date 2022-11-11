@@ -21,7 +21,7 @@
     </security>
   </trustInfo>
 
-	<SquirrelAwareVersion xmlns="urn:schema-squirrel-com:asm.v1">1.0.0</SquirrelAwareVersion>
+	<SquirrelAwareVersion xmlns="urn:schema-squirrel-com:asm.v1">1</SquirrelAwareVersion>
 
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
