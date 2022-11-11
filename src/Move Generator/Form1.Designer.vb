@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.pg_MoveInfo = New System.Windows.Forms.TabPage()
         Me.description_txtBox = New System.Windows.Forms.RichTextBox()
@@ -54,16 +55,20 @@ Partial Class Form1
         Me.pg_Output = New System.Windows.Forms.TabPage()
         Me.output_txtBox = New System.Windows.Forms.RichTextBox()
         Me.generate_btn = New System.Windows.Forms.Button()
+        Me.pg_About = New System.Windows.Forms.TabPage()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.TabControl1.SuspendLayout()
         Me.pg_MoveInfo.SuspendLayout()
         Me.flags_grpBox.SuspendLayout()
         Me.pg_Output.SuspendLayout()
+        Me.pg_About.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.pg_MoveInfo)
         Me.TabControl1.Controls.Add(Me.pg_Output)
+        Me.TabControl1.Controls.Add(Me.pg_About)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
@@ -376,6 +381,26 @@ Partial Class Form1
         Me.generate_btn.Text = "Generate"
         Me.generate_btn.UseVisualStyleBackColor = True
         '
+        'pg_About
+        '
+        Me.pg_About.Controls.Add(Me.RichTextBox1)
+        Me.pg_About.Location = New System.Drawing.Point(4, 24)
+        Me.pg_About.Name = "pg_About"
+        Me.pg_About.Size = New System.Drawing.Size(603, 422)
+        Me.pg_About.TabIndex = 2
+        Me.pg_About.Text = "About"
+        Me.pg_About.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.ReadOnly = True
+        Me.RichTextBox1.Size = New System.Drawing.Size(603, 422)
+        Me.RichTextBox1.TabIndex = 0
+        Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -392,6 +417,7 @@ Partial Class Form1
         Me.pg_MoveInfo.PerformLayout()
         Me.flags_grpBox.ResumeLayout(False)
         Me.pg_Output.ResumeLayout(False)
+        Me.pg_About.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -428,4 +454,6 @@ Partial Class Form1
     Friend WithEvents flag_lstBox As ListBox
     Friend WithEvents output_txtBox As RichTextBox
     Friend WithEvents generate_btn As Button
+    Friend WithEvents pg_About As TabPage
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
