@@ -57,11 +57,13 @@ Partial Class Form1
         Me.generate_btn = New System.Windows.Forms.Button()
         Me.pg_About = New System.Windows.Forms.TabPage()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.pg_MoveInfo.SuspendLayout()
         Me.flags_grpBox.SuspendLayout()
         Me.pg_Output.SuspendLayout()
         Me.pg_About.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -383,6 +385,7 @@ Partial Class Form1
         '
         'pg_About
         '
+        Me.pg_About.Controls.Add(Me.PictureBox1)
         Me.pg_About.Controls.Add(Me.RichTextBox1)
         Me.pg_About.Location = New System.Drawing.Point(4, 24)
         Me.pg_About.Name = "pg_About"
@@ -401,6 +404,16 @@ Partial Class Form1
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Move_Generator.My.Resources.Resources.installBanner
+        Me.PictureBox1.Location = New System.Drawing.Point(525, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(78, 149)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -408,6 +421,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(611, 450)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -418,6 +432,7 @@ Partial Class Form1
         Me.flags_grpBox.ResumeLayout(False)
         Me.pg_Output.ResumeLayout(False)
         Me.pg_About.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -456,4 +471,5 @@ Partial Class Form1
     Friend WithEvents generate_btn As Button
     Friend WithEvents pg_About As TabPage
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
