@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Move Generator"
-#define MyAppVersion "1.0.3"
+#define MyAppVersion "1.0.4"
 #define MyAppPublisher "TheCrafters001"
 #define MyAppURL "https://thecrafters001.github.io/"
 #define MyAppExeName "Move Generator.exe"
@@ -27,8 +27,8 @@ OutputDir=.\
 OutputBaseFilename=MoveGeneratorSetup
 Compression=lzma
 SolidCompression=yes
-WizardImageFile=compiler:WizClassicImage.bmp
-WizardSmallImageFile=compiler:WizClassicSmallImage-IS.bmp
+WizardImageFile=..\logo\installBanner.bmp
+WizardSmallImageFile=..\logo\icon.bmp
 WizardStyle=modern
 DisableWelcomePage=False
 AppCopyright=Copyright (c) 2022 TheCrafters001
@@ -42,6 +42,9 @@ VersionInfoProductTextVersion={#MyAppVersion}
 ArchitecturesInstallIn64BitMode=x64
 ArchitecturesAllowed=x86 x64
 MinVersion=0,6.1
+SetupIconFile=..\logo\icon.ico
+UninstallDisplayIcon={app}\Move Generator.exe
+UninstallDisplayName=Move Generator
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
