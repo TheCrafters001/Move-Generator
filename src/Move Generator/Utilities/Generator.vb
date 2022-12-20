@@ -1,8 +1,9 @@
 ﻿Public Class Generator
 
-    Public Shared Sub CreateMove()
+    Public Shared Sub CreateMove18()
         Form1.output_txtBox.Text = ""
 
+        ' Create all the Variables we are going to use later.
         Dim internalName As String = ""
         Dim displayName As String = ""
         Dim moveType As String = ""
@@ -17,6 +18,11 @@
         Dim effectChance As String = ""
         Dim description As String = ""
         Dim output As String = ""
+
+        ' I know the code below is a mess.
+        ' But I will try and comment it as best as I can.
+        ' I am not great when it comes to code comments.
+        ' So don't expect much.
 
         If Form1.internalName_txtBox.Text = "" Then
             MessageBox.Show("You need to enter a Internal Move Name.", "Cannot Create Move", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -69,6 +75,12 @@
                 MessageBox.Show(ex.Message)
             End Try
         End If
+
+    End Sub
+
+
+    Public Shared Sub CreateMove17()
+        Form1.output_txtBox.Text = ""
 
     End Sub
 

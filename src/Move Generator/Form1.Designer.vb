@@ -25,6 +25,12 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.pg_MoveInfo = New System.Windows.Forms.TabPage()
+        Me.ess17Enable_chkBox = New System.Windows.Forms.CheckBox()
+        Me.ess17Specific_grp = New System.Windows.Forms.GroupBox()
+        Me.essFunctionCode_txt = New System.Windows.Forms.TextBox()
+        Me.essFunctionCode_lbl = New System.Windows.Forms.Label()
+        Me.ess17IDNumber_txt = New System.Windows.Forms.TextBox()
+        Me.ess17IDNumber_lbl = New System.Windows.Forms.Label()
         Me.description_txtBox = New System.Windows.Forms.RichTextBox()
         Me.description_lbl = New System.Windows.Forms.Label()
         Me.effectChance_txtBox = New System.Windows.Forms.TextBox()
@@ -58,19 +64,13 @@ Partial Class Form1
         Me.pg_About = New System.Windows.Forms.TabPage()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.ess17Specific_grp = New System.Windows.Forms.GroupBox()
-        Me.ess17Enable_chkBox = New System.Windows.Forms.CheckBox()
-        Me.ess17IDNumber_lbl = New System.Windows.Forms.Label()
-        Me.ess17IDNumber_txt = New System.Windows.Forms.TextBox()
-        Me.essFunctionCode_txt = New System.Windows.Forms.TextBox()
-        Me.essFunctionCode_lbl = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.pg_MoveInfo.SuspendLayout()
+        Me.ess17Specific_grp.SuspendLayout()
         Me.flags_grpBox.SuspendLayout()
         Me.pg_Output.SuspendLayout()
         Me.pg_About.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ess17Specific_grp.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -121,6 +121,65 @@ Partial Class Form1
         Me.pg_MoveInfo.TabIndex = 0
         Me.pg_MoveInfo.Text = "Move Information"
         Me.pg_MoveInfo.UseVisualStyleBackColor = True
+        '
+        'ess17Enable_chkBox
+        '
+        Me.ess17Enable_chkBox.AutoSize = True
+        Me.ess17Enable_chkBox.Location = New System.Drawing.Point(470, 6)
+        Me.ess17Enable_chkBox.Name = "ess17Enable_chkBox"
+        Me.ess17Enable_chkBox.Size = New System.Drawing.Size(202, 19)
+        Me.ess17Enable_chkBox.TabIndex = 0
+        Me.ess17Enable_chkBox.Text = "Use Legacy (Essentials 17) Format"
+        Me.ess17Enable_chkBox.UseVisualStyleBackColor = True
+        '
+        'ess17Specific_grp
+        '
+        Me.ess17Specific_grp.Controls.Add(Me.essFunctionCode_txt)
+        Me.ess17Specific_grp.Controls.Add(Me.essFunctionCode_lbl)
+        Me.ess17Specific_grp.Controls.Add(Me.ess17IDNumber_txt)
+        Me.ess17Specific_grp.Controls.Add(Me.ess17IDNumber_lbl)
+        Me.ess17Specific_grp.Enabled = False
+        Me.ess17Specific_grp.Location = New System.Drawing.Point(470, 31)
+        Me.ess17Specific_grp.Name = "ess17Specific_grp"
+        Me.ess17Specific_grp.Size = New System.Drawing.Size(218, 385)
+        Me.ess17Specific_grp.TabIndex = 25
+        Me.ess17Specific_grp.TabStop = False
+        Me.ess17Specific_grp.Text = "Essentials 17 Specific Options"
+        '
+        'essFunctionCode_txt
+        '
+        Me.essFunctionCode_txt.Location = New System.Drawing.Point(6, 81)
+        Me.essFunctionCode_txt.MaxLength = 3
+        Me.essFunctionCode_txt.Name = "essFunctionCode_txt"
+        Me.essFunctionCode_txt.PlaceholderText = "00A"
+        Me.essFunctionCode_txt.Size = New System.Drawing.Size(206, 23)
+        Me.essFunctionCode_txt.TabIndex = 3
+        '
+        'essFunctionCode_lbl
+        '
+        Me.essFunctionCode_lbl.AutoSize = True
+        Me.essFunctionCode_lbl.Location = New System.Drawing.Point(6, 63)
+        Me.essFunctionCode_lbl.Name = "essFunctionCode_lbl"
+        Me.essFunctionCode_lbl.Size = New System.Drawing.Size(85, 15)
+        Me.essFunctionCode_lbl.TabIndex = 2
+        Me.essFunctionCode_lbl.Text = "Function Code"
+        '
+        'ess17IDNumber_txt
+        '
+        Me.ess17IDNumber_txt.Location = New System.Drawing.Point(6, 37)
+        Me.ess17IDNumber_txt.Name = "ess17IDNumber_txt"
+        Me.ess17IDNumber_txt.PlaceholderText = "299"
+        Me.ess17IDNumber_txt.Size = New System.Drawing.Size(206, 23)
+        Me.ess17IDNumber_txt.TabIndex = 1
+        '
+        'ess17IDNumber_lbl
+        '
+        Me.ess17IDNumber_lbl.AutoSize = True
+        Me.ess17IDNumber_lbl.Location = New System.Drawing.Point(6, 19)
+        Me.ess17IDNumber_lbl.Name = "ess17IDNumber_lbl"
+        Me.ess17IDNumber_lbl.Size = New System.Drawing.Size(65, 15)
+        Me.ess17IDNumber_lbl.TabIndex = 0
+        Me.ess17IDNumber_lbl.Text = "ID Number"
         '
         'description_txtBox
         '
@@ -402,7 +461,7 @@ Partial Class Form1
         Me.pg_About.Controls.Add(Me.RichTextBox1)
         Me.pg_About.Location = New System.Drawing.Point(4, 24)
         Me.pg_About.Name = "pg_About"
-        Me.pg_About.Size = New System.Drawing.Size(645, 422)
+        Me.pg_About.Size = New System.Drawing.Size(694, 422)
         Me.pg_About.TabIndex = 2
         Me.pg_About.Text = "About"
         Me.pg_About.UseVisualStyleBackColor = True
@@ -410,7 +469,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Move_Generator.My.Resources.Resources.installBanner
-        Me.PictureBox1.Location = New System.Drawing.Point(564, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(613, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(78, 149)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -423,68 +482,9 @@ Partial Class Form1
         Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(645, 422)
+        Me.RichTextBox1.Size = New System.Drawing.Size(694, 422)
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
-        '
-        'ess17Specific_grp
-        '
-        Me.ess17Specific_grp.Controls.Add(Me.essFunctionCode_txt)
-        Me.ess17Specific_grp.Controls.Add(Me.essFunctionCode_lbl)
-        Me.ess17Specific_grp.Controls.Add(Me.ess17IDNumber_txt)
-        Me.ess17Specific_grp.Controls.Add(Me.ess17IDNumber_lbl)
-        Me.ess17Specific_grp.Enabled = False
-        Me.ess17Specific_grp.Location = New System.Drawing.Point(470, 31)
-        Me.ess17Specific_grp.Name = "ess17Specific_grp"
-        Me.ess17Specific_grp.Size = New System.Drawing.Size(218, 385)
-        Me.ess17Specific_grp.TabIndex = 25
-        Me.ess17Specific_grp.TabStop = False
-        Me.ess17Specific_grp.Text = "Essentials 17 Specific Options"
-        '
-        'ess17Enable_chkBox
-        '
-        Me.ess17Enable_chkBox.AutoSize = True
-        Me.ess17Enable_chkBox.Location = New System.Drawing.Point(470, 6)
-        Me.ess17Enable_chkBox.Name = "ess17Enable_chkBox"
-        Me.ess17Enable_chkBox.Size = New System.Drawing.Size(202, 19)
-        Me.ess17Enable_chkBox.TabIndex = 0
-        Me.ess17Enable_chkBox.Text = "Use Legacy (Essentials 17) Format"
-        Me.ess17Enable_chkBox.UseVisualStyleBackColor = True
-        '
-        'ess17IDNumber_lbl
-        '
-        Me.ess17IDNumber_lbl.AutoSize = True
-        Me.ess17IDNumber_lbl.Location = New System.Drawing.Point(6, 19)
-        Me.ess17IDNumber_lbl.Name = "ess17IDNumber_lbl"
-        Me.ess17IDNumber_lbl.Size = New System.Drawing.Size(65, 15)
-        Me.ess17IDNumber_lbl.TabIndex = 0
-        Me.ess17IDNumber_lbl.Text = "ID Number"
-        '
-        'ess17IDNumber_txt
-        '
-        Me.ess17IDNumber_txt.Location = New System.Drawing.Point(6, 37)
-        Me.ess17IDNumber_txt.Name = "ess17IDNumber_txt"
-        Me.ess17IDNumber_txt.PlaceholderText = "299"
-        Me.ess17IDNumber_txt.Size = New System.Drawing.Size(206, 23)
-        Me.ess17IDNumber_txt.TabIndex = 1
-        '
-        'essFunctionCode_txt
-        '
-        Me.essFunctionCode_txt.Location = New System.Drawing.Point(6, 81)
-        Me.essFunctionCode_txt.MaxLength = 3
-        Me.essFunctionCode_txt.Name = "essFunctionCode_txt"
-        Me.essFunctionCode_txt.PlaceholderText = "00A"
-        Me.essFunctionCode_txt.Size = New System.Drawing.Size(206, 23)
-        Me.essFunctionCode_txt.TabIndex = 3
-        '
-        'essFunctionCode_lbl
-        '
-        Me.essFunctionCode_lbl.AutoSize = True
-        Me.essFunctionCode_lbl.Location = New System.Drawing.Point(6, 63)
-        Me.essFunctionCode_lbl.Name = "essFunctionCode_lbl"
-        Me.essFunctionCode_lbl.Size = New System.Drawing.Size(85, 15)
-        Me.essFunctionCode_lbl.TabIndex = 2
-        Me.essFunctionCode_lbl.Text = "Function Code"
         '
         'Form1
         '
@@ -501,12 +501,12 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.pg_MoveInfo.ResumeLayout(False)
         Me.pg_MoveInfo.PerformLayout()
+        Me.ess17Specific_grp.ResumeLayout(False)
+        Me.ess17Specific_grp.PerformLayout()
         Me.flags_grpBox.ResumeLayout(False)
         Me.pg_Output.ResumeLayout(False)
         Me.pg_About.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ess17Specific_grp.ResumeLayout(False)
-        Me.ess17Specific_grp.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
