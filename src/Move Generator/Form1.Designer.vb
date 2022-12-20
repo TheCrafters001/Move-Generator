@@ -27,8 +27,8 @@ Partial Class Form1
         Me.pg_MoveInfo = New System.Windows.Forms.TabPage()
         Me.ess17Enable_chkBox = New System.Windows.Forms.CheckBox()
         Me.ess17Specific_grp = New System.Windows.Forms.GroupBox()
-        Me.essFunctionCode_txt = New System.Windows.Forms.TextBox()
-        Me.essFunctionCode_lbl = New System.Windows.Forms.Label()
+        Me.ess17FunctionCode_txt = New System.Windows.Forms.TextBox()
+        Me.ess17FunctionCode_lbl = New System.Windows.Forms.Label()
         Me.ess17IDNumber_txt = New System.Windows.Forms.TextBox()
         Me.ess17IDNumber_lbl = New System.Windows.Forms.Label()
         Me.description_txtBox = New System.Windows.Forms.RichTextBox()
@@ -134,8 +134,8 @@ Partial Class Form1
         '
         'ess17Specific_grp
         '
-        Me.ess17Specific_grp.Controls.Add(Me.essFunctionCode_txt)
-        Me.ess17Specific_grp.Controls.Add(Me.essFunctionCode_lbl)
+        Me.ess17Specific_grp.Controls.Add(Me.ess17FunctionCode_txt)
+        Me.ess17Specific_grp.Controls.Add(Me.ess17FunctionCode_lbl)
         Me.ess17Specific_grp.Controls.Add(Me.ess17IDNumber_txt)
         Me.ess17Specific_grp.Controls.Add(Me.ess17IDNumber_lbl)
         Me.ess17Specific_grp.Enabled = False
@@ -146,23 +146,23 @@ Partial Class Form1
         Me.ess17Specific_grp.TabStop = False
         Me.ess17Specific_grp.Text = "Essentials 17 Specific Options"
         '
-        'essFunctionCode_txt
+        'ess17FunctionCode_txt
         '
-        Me.essFunctionCode_txt.Location = New System.Drawing.Point(6, 81)
-        Me.essFunctionCode_txt.MaxLength = 3
-        Me.essFunctionCode_txt.Name = "essFunctionCode_txt"
-        Me.essFunctionCode_txt.PlaceholderText = "00A"
-        Me.essFunctionCode_txt.Size = New System.Drawing.Size(206, 23)
-        Me.essFunctionCode_txt.TabIndex = 3
+        Me.ess17FunctionCode_txt.Location = New System.Drawing.Point(6, 81)
+        Me.ess17FunctionCode_txt.MaxLength = 3
+        Me.ess17FunctionCode_txt.Name = "ess17FunctionCode_txt"
+        Me.ess17FunctionCode_txt.PlaceholderText = "00A"
+        Me.ess17FunctionCode_txt.Size = New System.Drawing.Size(206, 23)
+        Me.ess17FunctionCode_txt.TabIndex = 3
         '
-        'essFunctionCode_lbl
+        'ess17FunctionCode_lbl
         '
-        Me.essFunctionCode_lbl.AutoSize = True
-        Me.essFunctionCode_lbl.Location = New System.Drawing.Point(6, 63)
-        Me.essFunctionCode_lbl.Name = "essFunctionCode_lbl"
-        Me.essFunctionCode_lbl.Size = New System.Drawing.Size(85, 15)
-        Me.essFunctionCode_lbl.TabIndex = 2
-        Me.essFunctionCode_lbl.Text = "Function Code"
+        Me.ess17FunctionCode_lbl.AutoSize = True
+        Me.ess17FunctionCode_lbl.Location = New System.Drawing.Point(6, 63)
+        Me.ess17FunctionCode_lbl.Name = "ess17FunctionCode_lbl"
+        Me.ess17FunctionCode_lbl.Size = New System.Drawing.Size(85, 15)
+        Me.ess17FunctionCode_lbl.TabIndex = 2
+        Me.ess17FunctionCode_lbl.Text = "Function Code"
         '
         'ess17IDNumber_txt
         '
@@ -548,8 +548,8 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ess17Enable_chkBox As CheckBox
     Friend WithEvents ess17Specific_grp As GroupBox
-    Friend WithEvents essFunctionCode_txt As TextBox
-    Friend WithEvents essFunctionCode_lbl As Label
+    Friend WithEvents ess17FunctionCode_txt As TextBox
+    Friend WithEvents ess17FunctionCode_lbl As Label
     Friend WithEvents ess17IDNumber_txt As TextBox
     Friend WithEvents ess17IDNumber_lbl As Label
 End Class
