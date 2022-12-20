@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Move Generator"
-#define MyAppVersion "1.0.4"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "TheCrafters001"
 #define MyAppURL "https://thecrafters001.github.io/"
 #define MyAppExeName "Move Generator.exe"
