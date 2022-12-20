@@ -9,12 +9,12 @@
     <MyType>WindowsForms</MyType>
     <Authors>TheCrafters001</Authors>
     <Company>TheCrafters001</Company>
-    <Copyright>Copyright (c) 2022 TheCrafters001</Copyright>
+    <Copyright>Copyright (c) 2022-2023 TheCrafters001</Copyright>
     <PackageProjectUrl>https://github.com/TheCrafters001/Move-Generator</PackageProjectUrl>
     <RepositoryUrl>https://github.com/TheCrafters001/Move-Generator</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Version>1.0.4</Version>
+    <Version>1.1.0</Version>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <PackageIcon>icon.png</PackageIcon>
