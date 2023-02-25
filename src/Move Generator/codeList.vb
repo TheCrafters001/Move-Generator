@@ -10,11 +10,24 @@
                 func = "None"
                 desc = "This does literally nothing. ^.^"
 
-            ElseIf ComboBox1.SelectedItem = "Unimplemented" Then ' If it is set to 'Unimplemented'
-                func = "Unimplemented"
-                desc = "Superclass that handles moves using a non-existent function code." & vbCrLf &
-                    "Damaging moves just do damage with no additional effect." & vbCrLf &
-                    "Status moves always fail."
+            ElseIf ComboBox1.SelectedItem = "DoesNothingCongratulations" Then ' If it is set to 'DoesNothingCongratulations'
+                func = "Does Nothing Congratulations"
+                desc = "This does absolutely nothing." & vbCrLf &
+                    "Shows a little message." & vbCrLf &
+                    "Example Move: Celebrate" & vbCrLf &
+                    "Message Shown:" & vbCrLf &
+                    """Congratulations from {Pokemon}!"" or" & vbCrLf &
+                    """Congratulations, {Pokemon}!"""
+
+            ElseIf ComboBox1.SelectedItem = "DoesNothingFailsIfNoAlly" Then ' If it is set to 'DoesNothingFailsIfNoAlly'
+                func = "Does Nothing Fails If NoAlly"
+                desc = "This does absolutely nothing." & vbCrLf &
+                    "Example Move: Hold Hands"
+
+            ElseIf ComboBox1.SelectedItem = "DoesNothingUnusableInGravity" Then ' If it is set to 'DoesNothingUnusableInGravity'
+                func = "Does Nothing Unusable In Gravity"
+                desc = "This does absolutely nothing." & vbCrLf &
+                    "Example Move: Splash"
 
             Else ' If it isn't found in the list above.
                 func = "Unknown"
@@ -37,7 +50,7 @@
         If Label1.Text = "Unimplemented" Then
             MessageBox.Show("You can't use an Unimplemented Function Code.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            Form1.functionCode_txtBox.Text = ComboBox1.SelectedItem.Text
+            Form1.functionCode_txtBox.Text = ComboBox1.SelectedItem
             Me.Close()
         End If
     End Sub
