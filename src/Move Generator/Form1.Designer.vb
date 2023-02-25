@@ -64,6 +64,7 @@ Partial Class Form1
         Me.pg_About = New System.Windows.Forms.TabPage()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.codeList_btn = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.pg_MoveInfo.SuspendLayout()
         Me.ess17Specific_grp.SuspendLayout()
@@ -87,6 +88,7 @@ Partial Class Form1
         '
         'pg_MoveInfo
         '
+        Me.pg_MoveInfo.Controls.Add(Me.codeList_btn)
         Me.pg_MoveInfo.Controls.Add(Me.ess17Enable_chkBox)
         Me.pg_MoveInfo.Controls.Add(Me.ess17Specific_grp)
         Me.pg_MoveInfo.Controls.Add(Me.description_txtBox)
@@ -486,6 +488,15 @@ Partial Class Form1
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
+        'codeList_btn
+        '
+        Me.codeList_btn.Location = New System.Drawing.Point(410, 27)
+        Me.codeList_btn.Name = "codeList_btn"
+        Me.codeList_btn.Size = New System.Drawing.Size(54, 23)
+        Me.codeList_btn.TabIndex = 26
+        Me.codeList_btn.Text = "List..."
+        Me.codeList_btn.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -552,4 +563,5 @@ Partial Class Form1
     Friend WithEvents ess17FunctionCode_lbl As Label
     Friend WithEvents ess17IDNumber_txt As TextBox
     Friend WithEvents ess17IDNumber_lbl As Label
+    Friend WithEvents codeList_btn As Button
 End Class

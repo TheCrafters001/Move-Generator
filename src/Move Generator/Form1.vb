@@ -42,4 +42,8 @@
         End If
 
     End Sub
+
+    Private Sub codeList_btn_Click(sender As Object, e As EventArgs) Handles codeList_btn.Click
+        codeList.Show()
+    End Sub
 End Class
