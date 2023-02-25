@@ -30,6 +30,7 @@
         If ess17Enable_chkBox.Checked = True Then
             functionCode_lbl.Enabled = False
             functionCode_txtBox.Enabled = False
+            codeList_btn.Enabled = False
 
             ess17Specific_grp.Enabled = True
 
@@ -37,6 +38,7 @@
         ElseIf ess17Enable_chkBox.Checked = False Then
             functionCode_lbl.Enabled = True
             functionCode_txtBox.Enabled = True
+            codeList_btn.Enabled = True
 
             ess17Specific_grp.Enabled = False
         End If
